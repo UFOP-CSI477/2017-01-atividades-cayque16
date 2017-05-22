@@ -1,0 +1,13 @@
+thead {color: white}
+thead {background: black}
+tfoot {color: white}
+tfoot {background: black}			
+tbody {color: #288204;font-family: perpetua;font-size: 20px}
+table {width: 100%;border-collapse: collapse}
+table,th,td {border: 2px solid black}
+caption {font-size: 15pt}
+
+/*Definindo cor das linhas pares*/
+tr: nth-child(even) {background-color: blue;}
+/*Definindo cor das linhas impares*/
+tr: nth-child(odd) {background-color: red;}

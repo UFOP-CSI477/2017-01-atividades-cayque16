@@ -1,0 +1,19 @@
+01) Formulário de cadastro
+	-nome
+	-rua
+	-numero
+	-bairro
+	-estado
+	-cidade
+	-telefone
+	-celular(chk: whats,telegram,signal)
+	-cpf
+	-rg
+	-gênero
+	-data nasc
+	-e-mail
+	-confirmação e-mail
+	-usuário
+	-senha
+	-confirmação de senha
+	-enviar/limpar
