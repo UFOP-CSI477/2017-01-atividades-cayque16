@@ -1,0 +1,63 @@
+<!DOCTYPE <html>
+<head>
+	<meta charset="utf-8">
+	<title>Form com Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+</head>
+<body>
+		<div class="container">
+
+			<div class="alert alert-success">Cadastro realizado com sucesso!</div>
+			<div class="alert alert-warning">Alguns dados não foram preenchidos!</div>
+			<div class="alert alert-danger"><strong>ERRO!</strong> Dados incorretos!</div>
+
+			<img src="alvo.jpg" alt="formiga" class="img-circle">
+
+			<h1 class="text-center">Cadastro de alunos</h1>
+			<form action="#">
+				<div class="form-group">
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" class="form-control" placeholder="Digite o seu nome aqui...">
+				</div>
+				<div>
+					<label for="endereco">Endereco:</label>
+					<input type="text" name="endereco" class="form-control">
+				</div>
+				<div>
+					<label for="email">E-Mail:</label>
+					<input type="text" name="email" class="form-control" placeholder="usuario@dominio.com">
+				</div>
+				<div class="checkbox-inline">
+					<label>
+						<input type="checkbox" name="interesse"  value="1">Web
+					</label>
+				</div>
+				<div class="checkbox-inline">
+					<label>
+						<input type="checkbox" name="interesse"  value="1">Banco de Dados
+					</label>
+				</div>
+				<br>
+				<div class="radio-inline">
+					<label>
+						<input type="radio" name="genero"  value="M">Masculino
+					</label>
+				</div>
+				<div class="radio-inline">
+					<label>
+						<input type="radio" name="genero"  value="F">Feminino
+					</label>
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="cidade">Cidade:</label>
+					<select class="form-control" id="cidade">
+						<option value="1">João Monlevade</option>
+						<option value="2">Belo Horizonte</option>
+						<option value="3">Ipatinga</option>
+					</select>
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+			</form>
+		</div>
+</body>
+</hmtl>
