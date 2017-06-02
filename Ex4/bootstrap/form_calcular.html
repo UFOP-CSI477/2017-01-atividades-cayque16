@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cálculo em JS com formulário</title>
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo em JS com Form</title>
 
-    <script>
-      function calcular(){
+  <link rel="stylesheet" href="./css/bootstrap.css">
 
-        if (document.dados.n1.value.length == 0){
-          window.alert("Informe o primeiro número");
-          document.dados.n1.focus();
-          return;
-        }else if (document.dados.n2.value.length == 0){
-          window.alert("Informe o segundo número");
-          document.dados.n2.focus();
-          return;
-        }
+  <script>
+  function calcular() {
+    var n1 = parseInt(document.dados.n1.value);
+    var n2 = parseInt(document.dados.n2.value);
+    if (document.dados.n1.value.length == 0 || isNaN(n1)) {
+      //window.alert("Informe o primeiro numero corretamente!");
+      document.getElementById("grupoN1").classList.add("has-error");
+      document.getElementById("alertN1").style.display = "block";
+      document.dados.n1.value = "";
+      document.dados.n1.focus();
+      return;
+    } else if (document.dados.n2.value.length == 0 || isNaN(n2)) {
+      //window.alert("Informe o segundo numero corretamente!");
+      document.getElementById("grupoN2").classList.add("has-error");
+      document.getElementById("alertN2").style.display = "block";
+      document.dados.n2.value = "";
+      document.dados.n2.focus();
+      return;
+    }
+    document.getElementById("grupoN1").classList.remove("has-error");
+    document.getElementById("alertN1").style.display = "none";
+    document.getElementById("grupoN2").classList.remove("has-error");
+    document.getElementById("alertN2").style.display = "none";
+    var res = n1 + n2;
+    document.dados.resultado.value = res;
+  }
+  </script>
 
-        var n1= document.dados.n1.value;
-        var n2= document.dados.n2.value;
+</head>
+<body>
 
-        if (isNaN(n1)){
-          window.alert("Informe o primeiro número corretamente!");
-          document.dados.n1.value = "";
-          document.dados.n1.focus();
-          return;
-        } else if(isNaN(n2)){
-          window.alert("Informe o primeiro número corretamente!");
-          document.dados.n2.value = "";
-          document.dados.n2.focus();
-          return;
-        }
+  <div class="container">
 
-        var res = parseInt(n1) + parseInt(n2);
-        document.dados.resultado.value = res;
-      }
-    </script>
+    <div class="jumbotron text-center">
+      <h1>Validação e cálculo com JS</h1>
+    </div>
 
-  </head>
-  <body>
     <form name="dados">
-      Primeiro número: <input type="text" name="n1"><br>
-      Segundo número: <input type="text" name="n2"><br>
 
-      Resultado: <input type="text" name="resultado"><br>
+      <div id="grupoN1" class="form-group"  action="#">
+        <label for="n1">Primeiro número</label>
+        <input type="text" name="n1" class="form-control" placeholder="123456">
+        <div class="alert alert-danger fade in" id="alertN1" style="display: none">
+          Informe o primeiro número corretamente.
+        </div>
+      </div>
 
-      <button type="button" onclick="calcular()">Calcular</button>
+      <div id="grupoN2" class="form-group">
+        <label for="n2">Segundo número</label>
+        <input type="text" name="n2" class="form-control" placeholder="123456">
+        <div class="alert alert-danger fade in" id="alertN2" style="display: none">
+          Informe o primeiro número corretamente.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="resultado">Resultado</label>
+        <input type="text" name="resultado" class="form-control" placeholder="123456" disabled="disabled">
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+
+      <input type="reset" class="btn btn-primary" value="Limpar">
+
     </form>
-  </body>
+  </div>
+</body>
 </html>
