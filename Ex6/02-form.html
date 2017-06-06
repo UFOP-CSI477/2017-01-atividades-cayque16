@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Validação e cálculo com jQuery</title>
+
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <script src="./jquery/jquery-3.2.1.js"></script>
+  <script src="form.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Validação e cálculo com JS</h1>
+    </div>
+
+    <form name="dados">
+
+      <div id="grupoN1" class="form-group"  action="#">
+        <label for="n1">Primeiro número</label>
+        <input type="text" name="n1" class="form-control" placeholder="123456">
+        <div class="alert alert-danger fade in" id="alertN1" style="display: none">
+          Informe o primeiro número corretamente.
+        </div>
+      </div>
+
+      <div id="grupoN2" class="form-group">
+        <label for="n2">Segundo número</label>
+        <input type="text" name="n2" class="form-control" placeholder="123456">
+        <div class="alert alert-danger fade in" id="alertN2" style="display: none">
+          Informe o primeiro número corretamente.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="resultado">Resultado</label>
+        <input type="text" name="resultado" class="form-control" placeholder="123456" disabled="disabled">
+      </div>
+
+      <button name="calculo" type="button" class="btn btn-primary">Calcular</button>
+
+      <input type="reset" class="btn btn-primary" value="Limpar">
+
+    </form>
+  </div>
+</body>
+</html>
