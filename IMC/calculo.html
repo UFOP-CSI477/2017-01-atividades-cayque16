@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cálculo de IMC</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="./jquery/jquery-3.2.1.js"></script>
+    <script src="form.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Cálculo de IMC</h1>
+      <p> Calculadora de Índice de Massa Corporal </p>
+    </div>
+    <div class="container col-md-6">
+      <form name="dados">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" class="form-control" placeholder="Seu Nome...">
+        <label for="idade">Idade:</label>
+        <input type="text" name="idade" class="form-control" placeholder="Sua Idade...">
+        <label for="peso">Peso:</label>
+        <input type="text" name="peso" class="form-control" placeholder="Seu Peso em Kg...">
+        <label for="altura">Altura:</label>
+        <input type="text" name="altura" class="form-control" placeholder="Sua Altura em cm...">
+      </form>
+    </div>
+    <div class="container col-md-6">
+      <form name="dados">
+        <label for="result">Valor do IMC:</label>
+        <input type="text" name="result" class="form-control" placeholder="00,0" disabled="disabled">
+        <label for="classi">Classificação:</label>
+        <input type="text" name="classi" class="form-control" placeholder="00,0" disabled="disabled">
+      </form>
+    </div>
+  </body>
+</html>
