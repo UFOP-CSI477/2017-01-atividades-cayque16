@@ -23,14 +23,48 @@
         <label for="altura">Altura:</label>
         <input type="text" name="altura" class="form-control" placeholder="Sua Altura em cm...">
       </form>
+        <br>
+        <button type="button" class ="btn btn-primary" name="calcular">Calcular</button>
+        <button type="button" class ="btn btn-primary" name="novo">Novo Cálculo</button>
     </div>
     <div class="container col-md-6">
       <form name="dados">
         <label for="result">Valor do IMC:</label>
         <input type="text" name="result" class="form-control" placeholder="00,0" disabled="disabled">
-        <label for="classi">Classificação:</label>
-        <input type="text" name="classi" class="form-control" placeholder="00,0" disabled="disabled">
       </form>
+      <label>Tabela de Classificação:</label>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>IMC</th>
+              <th>CLASSIFICAÇÃO</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Abaixo de 18,5</td>
+            <td>Subnutrição</td>
+          </tr>
+          <tr>
+            <td>Entre 18,6 e 24,9</td>
+            <td>Peso Saudável</td>
+          </tr>
+          <tr>
+            <td>Entre 25,0 e 29,9</td>
+            <td>Sobrepeso</td>
+          </tr>
+          <tr>
+            <td>Entre 30,0 e 34,9</td>
+            <td>Obesidade Grau 1</td>
+          </tr>
+          <tr>
+            <td>Entre 35,0 e 39,9</td>
+            <td>Obesidade Grau 2</td>
+          </tr>
+          <tr>
+            <td>Acima de 40</td>
+            <td>Obesidade Grau 3</td>
+          </tr>
+        </table>
     </div>
   </body>
 </html>
