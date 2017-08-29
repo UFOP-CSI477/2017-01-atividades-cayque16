@@ -16,8 +16,24 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', function () {
-    return view('inicial');
+    return view('principal');
 });
+
+Route::get('/clientes', function () {
+    return view('clientes');
+})->middleware('auth');
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/listaUsers', 'AdminController@users');
+
+Route::get('/listarTrans', 'AdminController@trans');
+
+Route::resource('/tipos', 'TiposController');
+
+Route::resource('/trans', 'TransController');
 
 Auth::routes();
 
